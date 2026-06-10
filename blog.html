@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="마포 마사지 링크 블로그 – 마사지 초보도 쉽게 따라 하는 꿀팁과 내돈내산 후기. 마포에서 진짜 좋은 마사지샵 고르는 법 알려드림.">
+    <meta name="keywords" content="마포 마사지, 마포 마사지 링크, 마사지 블로그, 마사지 후기, 마포구 마사지 추천, 마사지 꿀팁, 홍대 마사지, 합정 마사지, 상수 마사지">
+    <meta name="author" content="마포 마사지 링크">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://t3b05-mp-massage-link.vercel.app/blog">
+    <meta property="og:title" content="블로그 · 마포 마사지 링크 – 진짜 힐링은 여기서">
+    <meta property="og:description" content="마포 마사지 링크 블로그. 마사지 초보도 바로 이해하는 가이드와 실제 다녀온 후기. 합정, 홍대, 상수역 근처 마사지샵 비교 분석.">
+    <meta property="og:url" content="https://t3b05-mp-massage-link.vercel.app/blog">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>블로그 · 마포 마사지 링크 – 마사지 초보 가이드 &amp; 내돈내산 후기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== 리셋 & 기본 ===== */
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; font-size:16px; -webkit-text-size-adjust:100%; }
+        body { font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif; line-height:1.6; color:#1a1a1a; background:#f5f3ef; min-height:100vh; }
+        /* ===== 타이포그래피 ===== */
+        h1, h2, h3, h4, h5, h6 { font-family:'Inter','Noto Sans KR',sans-serif; font-weight:700; line-height:1.2; letter-spacing:-0.02em; }
+        h1 { font-size:clamp(2rem, 5vw, 3.2rem); margin-bottom:0.5em; }
+        h2 { font-size:clamp(1.5rem, 3.5vw, 2.2rem); margin-bottom:0.6em; }
+        h3 { font-size:1.25rem; margin-bottom:0.4em; }
+        p { margin-bottom:1em; }
+        a { color:#b3473c; text-decoration:none; transition:color .2s; }
+        a:hover { color:#8c2e24; }
+        /* ===== 레이아웃 ===== */
+        body { display:flex; flex-direction:column; }
+        header, footer, main { width:100%; }
+        section { padding:4rem 1.5rem; }
+        section:last-of-type { padding-bottom:5rem; }
+        .container { max-width:1200px; margin:0 auto; padding:0 1rem; }
+        /* ===== 네비게이션 ===== */
+        .nav-present { position:sticky; top:0; z-index:100; background:#1a1a1a; color:#fff; padding:0.8rem 1.5rem; }
+        .nav-present .container { display:flex; align-items:center; justify-content:space-between; }
+        .nav-present .logo { font-size:1.5rem; font-weight:800; color:#fff; letter-spacing:-0.03em; }
+        .nav-present .logo span { color:#e05a4f; }
+        .nav-present .nav-links { display:flex; gap:2rem; list-style:none; }
+        .nav-present .nav-links a { color:rgba(255,255,255,0.85); font-size:0.95rem; font-weight:500; transition:color .2s; }
+        .nav-present .nav-links a:hover { color:#e05a4f; }
+        .hamburger-menu { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:0.5rem; }
+        .hamburger-menu span { display:block; width:28px; height:3px; background:#fff; border-radius:2px; transition:all .3s; }
+        .tel-link { display:inline-flex; align-items:center; gap:0.4rem; background:#e05a4f; color:#fff; padding:0.5rem 1.2rem; border-radius:30px; font-weight:600; font-size:0.95rem; transition:background .2s; }
+        .tel-link:hover { background:#c94439; color:#fff; }
+        /* ===== 히어로 ===== */
+        .hero-blog { background:#1a1a1a; color:#fff; text-align:center; padding:5rem 1.5rem; position:relative; overflow:hidden; }
+        .hero-blog::after { content:''; position:absolute; inset:0; background:repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 8px); pointer-events:none; }
+        .hero-blog h1 { font-size:clamp(2.2rem, 6vw, 3.8rem); margin-bottom:0.3em; }
+        .hero-blog p { font-size:1.2rem; opacity:0.85; max-width:700px; margin:0 auto; }
+        /* ===== 블로그 포스트 ===== */
+        .blog-post { background:#fff; border-radius:16px; padding:2.5rem; box-shadow:0 4px 20px rgba(0,0,0,0.06); margin:3rem auto; max-width:860px; }
+        .blog-post .post-meta { display:flex; gap:1rem; font-size:0.9rem; color:#666; margin-bottom:1rem; flex-wrap:wrap; }
+        .blog-post .post-meta span { background:#f0ede8; padding:0.2rem 0.8rem; border-radius:20px; }
+        .blog-post h2 { font-size:1.8rem; margin-bottom:0.5rem; }
+        .blog-post .post-content { font-size:1.05rem; line-height:1.8; }
+        .blog-post .post-content p { margin-bottom:1.2rem; }
+        .blog-post .post-content strong { color:#b3473c; }
+        .blog-post .post-content .highlight-box { background:#f8f6f2; border-left:4px solid #e05a4f; padding:1.2rem 1.5rem; margin:1.5rem 0; border-radius:0 12px 12px 0; }
+        .blog-post .post-content .highlight-box p:last-child { margin-bottom:0; }
+        .blog-post .post-footer { border-top:2px solid #eee; padding-top:1.5rem; margin-top:2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+        .blog-post .post-footer .tags { display:flex; gap:0.5rem; flex-wrap:wrap; }
+        .blog-post .post-footer .tags span { background:#e8e3db; color:#333; padding:0.2rem 0.8rem; border-radius:20px; font-size:0.85rem; }
+        .blog-post .post-footer .share-btns { display:flex; gap:0.5rem; }
+        .blog-post .post-footer .share-btns a { display:inline-block; padding:0.4rem 1rem; border:1px solid #ddd; border-radius:30px; font-size:0.85rem; transition:all .2s; }
+        .blog-post .post-footer .share-btns a:hover { background:#b3473c; color:#fff; border-color:#b3473c; }
+        /* ===== 문서 하단 CTA ===== */
+        .post-cta { text-align:center; background:#f0ede8; border-radius:16px; padding:2.5rem; margin:2rem auto; max-width:860px; }
+        .post-cta h3 { font-size:1.5rem; margin-bottom:0.5rem; }
+        .post-cta p { margin-bottom:1.2rem; color:#555; }
+        .post-cta .tel-link { display:inline-flex; font-size:1.1rem; padding:0.7rem 2rem; }
+        /* ===== 푸터 ===== */
+        footer { background:#1a1a1a; color:rgba(255,255,255,0.7); padding:3rem 1.5rem 1.5rem; }
+        footer .container { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:2rem; }
+        footer h4 { color:#fff; margin-bottom:1rem; font-size:1.1rem; }
+        footer ul { list-style:none; }
+        footer ul li { margin-bottom:0.4rem; }
+        footer ul li a { color:rgba(255,255,255,0.6); font-size:0.9rem; }
+        footer ul li a:hover { color:#e05a4f; }
+        footer .footer-bottom { grid-column:1 / -1; border-top:1px solid rgba(255,255,255,0.1); padding-top:1.5rem; margin-top:2rem; text-align:center; font-size:0.85rem; }
+        footer .footer-bottom a { color:#e05a4f; }
+        /* ===== 반응형 ===== */
+        @media (max-width:768px) {
+            .responsive-768 .nav-present .nav-links { display:none; flex-direction:column; position:absolute; top:100%; left:0; right:0; background:#1a1a1a; padding:1.5rem; gap:1rem; }
+            .responsive-768 .nav-present .nav-links.active { display:flex; }
+            .responsive-768 .hamburger-menu { display:flex; }
+            .responsive-768 .hero-blog { padding:3.5rem 1.2rem; }
+            .responsive-768 .blog-post { padding:1.5rem; margin:2rem 1rem; }
+            .responsive-768 .blog-post h2 { font-size:1.4rem; }
+            .responsive-768 .post-footer { flex-direction:column; align-items:flex-start; }
+        }
+    </style>
+</head>
+<body class="responsive-768">
+
+<!-- 헤더 & 네비게이션 -->
+<header class="nav-present">
+    <div class="container">
+        <a href="/" class="logo">마사지<span>링크</span></a>
+        <nav>
+            <button class="hamburger
+</body>
+</html>
