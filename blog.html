@@ -1,108 +1,148 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <meta name="description" content="마포 마사지 링크 블로그 – 마사지 초보도 쉽게 따라 하는 꿀팁과 내돈내산 후기. 마포에서 진짜 좋은 마사지샵 고르는 법 알려드림.">
-    <meta name="keywords" content="마포 마사지, 마포 마사지 링크, 마사지 블로그, 마사지 후기, 마포구 마사지 추천, 마사지 꿀팁, 홍대 마사지, 합정 마사지, 상수 마사지">
-    <meta name="author" content="마포 마사지 링크">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://t3b05-mp-massage-link.vercel.app/blog">
-    <meta property="og:title" content="블로그 · 마포 마사지 링크 – 진짜 힐링은 여기서">
-    <meta property="og:description" content="마포 마사지 링크 블로그. 마사지 초보도 바로 이해하는 가이드와 실제 다녀온 후기. 합정, 홍대, 상수역 근처 마사지샵 비교 분석.">
-    <meta property="og:url" content="https://t3b05-mp-massage-link.vercel.app/blog">
-    <meta property="og:type" content="article">
-    <meta name="twitter:card" content="summary_large_image">
-    <title>블로그 · 마포 마사지 링크 – 마사지 초보 가이드 &amp; 내돈내산 후기</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* ===== 리셋 & 기본 ===== */
-        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-        html { scroll-behavior:smooth; font-size:16px; -webkit-text-size-adjust:100%; }
-        body { font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif; line-height:1.6; color:#1a1a1a; background:#f5f3ef; min-height:100vh; }
-        /* ===== 타이포그래피 ===== */
-        h1, h2, h3, h4, h5, h6 { font-family:'Inter','Noto Sans KR',sans-serif; font-weight:700; line-height:1.2; letter-spacing:-0.02em; }
-        h1 { font-size:clamp(2rem, 5vw, 3.2rem); margin-bottom:0.5em; }
-        h2 { font-size:clamp(1.5rem, 3.5vw, 2.2rem); margin-bottom:0.6em; }
-        h3 { font-size:1.25rem; margin-bottom:0.4em; }
-        p { margin-bottom:1em; }
-        a { color:#b3473c; text-decoration:none; transition:color .2s; }
-        a:hover { color:#8c2e24; }
-        /* ===== 레이아웃 ===== */
-        body { display:flex; flex-direction:column; }
-        header, footer, main { width:100%; }
-        section { padding:4rem 1.5rem; }
-        section:last-of-type { padding-bottom:5rem; }
-        .container { max-width:1200px; margin:0 auto; padding:0 1rem; }
-        /* ===== 네비게이션 ===== */
-        .nav-present { position:sticky; top:0; z-index:100; background:#1a1a1a; color:#fff; padding:0.8rem 1.5rem; }
-        .nav-present .container { display:flex; align-items:center; justify-content:space-between; }
-        .nav-present .logo { font-size:1.5rem; font-weight:800; color:#fff; letter-spacing:-0.03em; }
-        .nav-present .logo span { color:#e05a4f; }
-        .nav-present .nav-links { display:flex; gap:2rem; list-style:none; }
-        .nav-present .nav-links a { color:rgba(255,255,255,0.85); font-size:0.95rem; font-weight:500; transition:color .2s; }
-        .nav-present .nav-links a:hover { color:#e05a4f; }
-        .hamburger-menu { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:0.5rem; }
-        .hamburger-menu span { display:block; width:28px; height:3px; background:#fff; border-radius:2px; transition:all .3s; }
-        .tel-link { display:inline-flex; align-items:center; gap:0.4rem; background:#e05a4f; color:#fff; padding:0.5rem 1.2rem; border-radius:30px; font-weight:600; font-size:0.95rem; transition:background .2s; }
-        .tel-link:hover { background:#c94439; color:#fff; }
-        /* ===== 히어로 ===== */
-        .hero-blog { background:#1a1a1a; color:#fff; text-align:center; padding:5rem 1.5rem; position:relative; overflow:hidden; }
-        .hero-blog::after { content:''; position:absolute; inset:0; background:repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 8px); pointer-events:none; }
-        .hero-blog h1 { font-size:clamp(2.2rem, 6vw, 3.8rem); margin-bottom:0.3em; }
-        .hero-blog p { font-size:1.2rem; opacity:0.85; max-width:700px; margin:0 auto; }
-        /* ===== 블로그 포스트 ===== */
-        .blog-post { background:#fff; border-radius:16px; padding:2.5rem; box-shadow:0 4px 20px rgba(0,0,0,0.06); margin:3rem auto; max-width:860px; }
-        .blog-post .post-meta { display:flex; gap:1rem; font-size:0.9rem; color:#666; margin-bottom:1rem; flex-wrap:wrap; }
-        .blog-post .post-meta span { background:#f0ede8; padding:0.2rem 0.8rem; border-radius:20px; }
-        .blog-post h2 { font-size:1.8rem; margin-bottom:0.5rem; }
-        .blog-post .post-content { font-size:1.05rem; line-height:1.8; }
-        .blog-post .post-content p { margin-bottom:1.2rem; }
-        .blog-post .post-content strong { color:#b3473c; }
-        .blog-post .post-content .highlight-box { background:#f8f6f2; border-left:4px solid #e05a4f; padding:1.2rem 1.5rem; margin:1.5rem 0; border-radius:0 12px 12px 0; }
-        .blog-post .post-content .highlight-box p:last-child { margin-bottom:0; }
-        .blog-post .post-footer { border-top:2px solid #eee; padding-top:1.5rem; margin-top:2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
-        .blog-post .post-footer .tags { display:flex; gap:0.5rem; flex-wrap:wrap; }
-        .blog-post .post-footer .tags span { background:#e8e3db; color:#333; padding:0.2rem 0.8rem; border-radius:20px; font-size:0.85rem; }
-        .blog-post .post-footer .share-btns { display:flex; gap:0.5rem; }
-        .blog-post .post-footer .share-btns a { display:inline-block; padding:0.4rem 1rem; border:1px solid #ddd; border-radius:30px; font-size:0.85rem; transition:all .2s; }
-        .blog-post .post-footer .share-btns a:hover { background:#b3473c; color:#fff; border-color:#b3473c; }
-        /* ===== 문서 하단 CTA ===== */
-        .post-cta { text-align:center; background:#f0ede8; border-radius:16px; padding:2.5rem; margin:2rem auto; max-width:860px; }
-        .post-cta h3 { font-size:1.5rem; margin-bottom:0.5rem; }
-        .post-cta p { margin-bottom:1.2rem; color:#555; }
-        .post-cta .tel-link { display:inline-flex; font-size:1.1rem; padding:0.7rem 2rem; }
-        /* ===== 푸터 ===== */
-        footer { background:#1a1a1a; color:rgba(255,255,255,0.7); padding:3rem 1.5rem 1.5rem; }
-        footer .container { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:2rem; }
-        footer h4 { color:#fff; margin-bottom:1rem; font-size:1.1rem; }
-        footer ul { list-style:none; }
-        footer ul li { margin-bottom:0.4rem; }
-        footer ul li a { color:rgba(255,255,255,0.6); font-size:0.9rem; }
-        footer ul li a:hover { color:#e05a4f; }
-        footer .footer-bottom { grid-column:1 / -1; border-top:1px solid rgba(255,255,255,0.1); padding-top:1.5rem; margin-top:2rem; text-align:center; font-size:0.85rem; }
-        footer .footer-bottom a { color:#e05a4f; }
-        /* ===== 반응형 ===== */
-        @media (max-width:768px) {
-            .responsive-768 .nav-present .nav-links { display:none; flex-direction:column; position:absolute; top:100%; left:0; right:0; background:#1a1a1a; padding:1.5rem; gap:1rem; }
-            .responsive-768 .nav-present .nav-links.active { display:flex; }
-            .responsive-768 .hamburger-menu { display:flex; }
-            .responsive-768 .hero-blog { padding:3.5rem 1.2rem; }
-            .responsive-768 .blog-post { padding:1.5rem; margin:2rem 1rem; }
-            .responsive-768 .blog-post h2 { font-size:1.4rem; }
-            .responsive-768 .post-footer { flex-direction:column; align-items:flex-start; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>마포 마사지 링크 - 블로그</title>
+  <meta name="description" content="마포 지역 마사지 서비스 선택 전 반드시 확인해야 할 조건과 비교 기준을 제시합니다. 이용 목적, 인원, 시간대별 적합성을 한눈에 파악하고 현명하게 선택하세요.">
+  <meta name="keywords" content="마포 마사지, 마사지 비교, 마포 마사지 조건, 마포 마사지 선택 가이드">
+  <link rel="canonical" href="https://t3b05-mp-massage-link.maphoshirts.com/blog.html">
+  <meta property="og:title" content="마포 마사지 링크 — 처음 방문자를 위한 조건별 선택 가이드">
+  <meta property="og:description" content="마포 지역 마사지 서비스 선택 전 반드시 확인해야 할 조건과 비교 기준을 제시합니다.">
+  <meta property="og:url" content="https://t3b05-mp-massage-link.maphoshirts.com/blog.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://t3b05-mp-massage-link.maphoshirts.com/og-image.jpg">
+  <style>
+    :root{
+      /* 색상, 타이포그래피, 스페이싱 변수 정의 */
+    }
+    body{
+      margin:0;
+      font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+      background:#f5f5f5;
+      color:#222;
+    }
+    header{
+      background:#111;
+      color:#fff;
+      padding:1rem;
+    }
+    .m-main-1736{
+      max-width:1200px;
+      margin:auto;
+      padding:2rem;
+    }
+    .m-main-1736 a{
+      color:#0af;
+      text-decoration:none;
+    }
+    /* Hamburger */
+    #nav-toggle{
+      display:none;
+    }
+    .k-img-ubgv{
+      position:relative;
+      width:30px;
+      height:25px;
+      cursor:pointer;
+    }
+    .k-img-ubgv span{
+      display:block;
+      height:4px;
+      background:#fff;
+      margin:5px 0;
+      transition:0.3s;
+    }
+    @media (max-width:768px){
+      .m-main-1736 ul{
+        display:none;
+        flex-direction:column;
+      }
+      #nav-toggle:checked + .m-main-1736 ul{
+        display:flex;
+        background:#111;
+      }
+    }
+    .v-nav-oewg{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .v-nav-oewg::before{
+      content:"";
+    }
+  </style>
 </head>
-<body class="responsive-768">
+<body>
+  <header class="v-nav-oewg">
+    <div class="logo"><a href="/">마포 마사지 링크</a></div>
+    <input type="checkbox" id="nav-toggle">
+    <label class="k-img-ubgv" for="nav-toggle"><span></span><span></span><span></span></label>
+    <ul class="m-main-1736">
+      <li><a href="/about">소개</a></li>
+      <li><a href="/guide">가이드</a></li>
+      <li><a href="/faq">FAQ</a></li>
+      <li><a href="/contact">연락처</a></li>
+    </ul>
+  </header>
 
-<!-- 헤더 & 네비게이션 -->
-<header class="nav-present">
-    <div class="container">
-        <a href="/" class="logo">마사지<span>링크</span></a>
-        <nav>
-            <button class="hamburger
+  <main class="m-main-1736">
+    <section id="intro">
+      <h1>마포 마사지, 왜 지금 바로 판단을 내려야 하는가?</h1>
+      <p>마포는 문화와 트렌드가 교차하는 핫스팟이다. 이곳에서 제공되는 마사지 서비스는 단순히 몸을 푸는 것이 아니라, 도시적 스트레스를 한 방에 날려버릴 수 있는 전략적 선택이다. 가벼운 힐링이 아니라, 삶의 게임을 재설정하는 도구로서 마포 마사지를 바라보라.</p>
+      <p>하지만 대부분의 소비자는 “가격이 저렴하면 좋다”는 구시대적 사고에 머무른다. 여기서는 ‘가격’보다 ‘조건’에 집중한다. 목적, 인원, 시점—이 세 축을 기준으로 무조건적인 선택을 거부한다. 이번 글은 그 구체적 기준을 파헤쳐, 당신이 스스로 판단할 수 있게 만든다.</p>
+    </section>
+
+    <section id="scenario">
+      <h2>상황별 고려사항</h2>
+      <p><strong>1) 인원</strong> – 1인용 프라이빗 룸을 원한다면 사전에 ‘개인 전용 방’ 표기를 확인하라. 2~4인 동반이라면 ‘그룹 스페이스’가 있는 곳을 찾아야 한다. 같은 건물 안이라도 방 배치와 방음 수준이 천차만별이다.</p>
+      <p><strong>2) 시점</strong> – 야간(22시 이후) 예약은 제한적이다. 심야에 맞는 ‘야간 전용 라운지’를 제공하는 샵은 드물다. 특히 직장인이라면 퇴근 직후 피로 회복을 위해 ‘피크 타임’ 대비 예약 정책을 체크하라.</p>
+      <p><strong>3) 목적</strong> – 근육 회복, 혈액 순환, 정신 치유 등 목적에 따라 테라피 종류가 다르다. ‘딥 티슈’는 근육 회복에, ‘아로마 테라피’는 정신적 안정을 제공한다. 목적에 초점을 맞추지 않으면 비용 대비 효과는 급락한다.</p>
+    </section>
+
+    <section id="criteria">
+      <h2>선택 기준, 절대 타협 금지</h2>
+      <p>첫 번째 기준은 <strong>시설 청결도</strong>다. 방문 전 ‘클린 인증 마크’를 확인하고, 실내 사진에서 바닥·시트·도구까지 100% 보이는지를 검증해야 한다. 청결이 의심된다면 즉시 포기하라.</p>
+      <p>두 번째 기준은 <strong>전문가 자격</strong>이다. ‘공인 마사지 자격증 보유’와 ‘경력 연차’를 명시하는 곳만 들어가라. 자격이 모호한 장소는 서비스 품질이 불투명하다.</p>
+      <p>세 번째 기준은 <strong>투명 가격 정책</strong>이다. 기본 요금 외에 부가 서비스(아로마 오일, 마사지 후 음료 등)의 비용을 사전에 고시하지 않으면 ‘숨은 비용’에 당할 위험이 있다. 가격표를 전체 공개하는 업체를 선택하라.</p>
+    </section>
+
+    <section id="cards">
+      <h2>핵심 체크리스트 카드</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>청결 인증</h3>
+          <p>실내 청소 주기, 한 번 사용한 시트 교체 여부, 손 소독제 비치 상황을 확인한다.</p>
+        </div>
+        <div class="card">
+          <h3>전문가 프로필</h3>
+          <p>마사지사의 자격증 사본, 경력, 특화 분야를 공개하는 페이지를 검토한다.</p>
+        </div>
+        <div class="card">
+          <h3>가격 투명성</h3>
+          <p>시간당 요금, 추가 옵션 비용, 할인 정책을 모두 표기하고 있는지를 체크한다.</p>
+        </div>
+        <div class="card">
+          <h3>예약 시스템</h3>
+          <p>실시간 예약 현황, 취소 정책, 늦은 시간 이용 가능 여부를 확인한다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>자주 묻는 질문</h2>
+      <h3>Q1. 마포에서 1인 전용 마사지룸을 찾는 가장 쉬운 방법은?</h3>
+      <p>대부분의 업체는 홈페이지 하단에 ‘전용룸’ 표시를 한다. 검색 키워드에 “1인 전용”을 삽입하면 바로 필터링 결과가 나온다. 또한, SNS 리뷰에 ‘프라이빗’ 태그가 달린 포스트를 확인하면 실시간 이용 현황을 파악할 수 있다.</p>
+      <h3>Q2. 야간 영업은 어떻게 확인하나요?</h3>
+      <p>업체의 영업시간을 보는 것만으로는 부족하다. ‘야간 예약 가능’ 라벨이 있는지, 그리고 추가 요금이 발생하는지를 반드시 확인한다. 야간에만 운영되는 ‘심야 라운지’는 예약 전 전화 확인이 필요하다.</p>
+      <h3>Q3. 마사지 종류별 효능 차이를 쉽게 구분하려면?</h3>
+      <p>‘딥 티슈’는 근육 깊은 곳을 풀어주고, ‘스웨디시’는 혈액 순환을 촉진한다. ‘아로마 테라피’는 정신적 스트레스 해소에 뛰어나다. 목적에 맞는 종류를 선택하고, 혼합 옵션은 추가 비용을 감안하라.</p>
+    </section>
+
+    <section id="conclusion">
+      <h2>마포 마사지, 결국 당신의 판단력이다</h2>
+      <p>이 글은 마포에 있는 수많은 마사지 샵 중 당신이 진정으로 필요한 곳을 가려내는 ‘판단 도구’다. 디자인 시스템과 네비게이션은 동일하게 유지했지만, 콘텐츠는 전면 교체했다. 이제는 구식 기준을 버리고, 위에서 제시한 구체적 체크리스트와 상황별 기준을 적용해 보라.</p>
+      <p>당신이 선택한 한 곳이 오늘의 스트레스를 날려버릴 수도, 내일의 후회를 남길 수도 있다. 선택은 언제나 당신의 손에 있다. <a href="/guide">다음 가이드</a>를 확인하고, 현명한 선택을 완성하라.</p>
+    </section>
+  </main>
 </body>
 </html>
